@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<input type="text" id="canha">
+<input type="text" id="canhb">
+<input type="text" id="canhc">
+<button type="button" onclick="kiemTra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function kiemTra(){
+        let a = +document.getElementById('canha').value
+        let b = +document.getElementById('canhb').value
+        let c = +document.getElementById('canhc').value
+        if (a+b>c && a+c>b && b+c>a && a*b*c>0){
+            if (a*a + b*b == c*c || a*a + c*c == b*b || c*c + b*b == a*a){
+                document.getElementById('ketqua').innerHTML='là tam giác vuông'
+            }else {
+                document.getElementById('ketqua').innerHTML='Không phải là tam giác vuông'
+            }
+        }else {
+            document.getElementById('ketqua').innerHTML='không phải là tam giác'
+        }
+    }
+
+</script>
+</body>
+</html>
